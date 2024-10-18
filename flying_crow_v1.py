@@ -19,7 +19,10 @@ MAX_CLOUDS = 8
 MENU_BACKGROUND_SCROLL_SPEED = 2
 
 # Asset paths
-ASSET_FOLDER = "/storage/emulated/0/pygame_sidescroller/images"
+# Get the absolute path to the folder where the script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ASSET_FOLDER = os.path.join(BASE_DIR, "assets")  # Use relative path
+
 CROW_WALK_ANIMATION_SHEET_PATH = os.path.join(ASSET_FOLDER, "crow_walk.png")
 CROW_FLYING_ANIMATION_SHEET_PATH = os.path.join(ASSET_FOLDER, "crow_flying_animation_sheet.png")
 BACKGROUND_IMAGE_PATH = os.path.join(ASSET_FOLDER, "background.png")
